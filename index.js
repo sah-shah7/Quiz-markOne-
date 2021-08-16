@@ -40,7 +40,7 @@ function play(question,answer){
   else{
     console.log(chalk.red.bold("It looks like we may have hit a bump! Right answer was "+ answer));
     score = score-3;
-    console.log('Current score : '+ score);
+    console.log('Current score : '+ chalk.red.bold(score));
   }
   console.log('-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-')
 }
@@ -59,7 +59,7 @@ var quizQuestions = [{
   question: "what do i prefer more? Tea or Coffee ",
   answer: "tea"
 },{
-  question: "What do i prefer more? Pizza or Pasta",
+  question: "What do i prefer more? Pizza or Pasta ",
   answer: "pizza"
 }]
 
