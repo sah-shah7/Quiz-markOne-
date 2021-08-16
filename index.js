@@ -48,16 +48,19 @@ function play(question,answer){
 //Questions For the Quiz. JSON
 var quizQuestions = [{
   question: "How old am I? ",
-  answer: "21"
+  answer: "22"
 }, {
-  question: "Which is my favourite online game? ",
-  answer: "chess"
+  question: "Which is my favourite sport to play? ",
+  answer: "football"
 }, {
-  question: "What is the name of my favourite anime? ",
-  answer: "naruto"
+  question: "Which is my favourite football club? Type the whole name ",
+  answer: "manchester united"
 }, {
-  question: "which one do I like? Coffee or Tea? ",
-  answer: "coffee"
+  question: "what do i prefer more? Tea or Coffee ",
+  answer: "tea"
+},{
+  question: "What do i prefer more? Pizza or Pasta",
+  answer: "pizza"
 }]
 
 //Looping through Questons
@@ -66,13 +69,13 @@ for(var i=0; i<quizQuestions.length; i++ ){
   play(quizQuestions[i].question,quizQuestions[i].answer)
 
 }
-console.log('YAY! You scored: ' + score);
+console.log("Uff that was quite intense! You scored: " + score);
 if(score >= scoreInfo[0].score){
   console.log(chalk("One more thing.....\n"));
   console.log(chalk("Congratulations! Your knowledge on Sahil is tiptop. You have secured the highest score\nSend me a screenshot of your triumph!"));
   console.log(chalk("New HighScore: "+ score));
 }
 else{
-  console.log(chalk.red.bold("Sorry! You are not the highest Scorer!\n"));
+  console.log(chalk.red.bold("Sorry! You are not the highest Scorer!"));
   console.log(("Current Highest Scorer: Name: "+ scoreInfo[0].name +" Score: " + scoreInfo[0].score ));
 }
